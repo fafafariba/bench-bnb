@@ -15,14 +15,14 @@ const Greeting = (props) => {
   const logoutHandler = e => {
     e.preventDefault();
     props.logout();
-    hashHistory.push("/");
+    // hashHistory.push("/");
   };
 
   if (props.currentUser) {
     greeting_content = (
       <section>
         <h2>Welcome {props.currentUser.username}</h2>
-        <button onClick={ logoutHandler }></button>
+        <button onClick={ logoutHandler }>Logout</button>
       </section>
     );
   }
